@@ -12,6 +12,8 @@ class Edge:
     def get_tail(self):
         return self.tuple[1]
 
+    def __str__(self):
+        return str(self.get_tail())
 class DiGraph:
 
     def __init__(self, V):
@@ -31,8 +33,8 @@ class DiGraph:
         u = E.get_head()   
         v = E.get_tail()
         self.out_adj[u].add(E)
-        self.out_adj[v].add(E)
-
+        self.in_adj[v].add(E)
+    
     @classmethod
     def fromstdin(cls):
         V = int(sys.stdin.readline())
@@ -56,11 +58,16 @@ class DiGraph:
     def __str__(self):
         s = "%d vertices, %d edges\n" % (self.V, self.E)
         s += "\n".join("%d: %s" % (v, " ".join(str(w)
-                                               for w in self.adj[v])) for v in range(self.V))    
+                                               for w in self.out_adj[v])) for v in range(self.V))    
+        return s
+
 if __name__ == '__main__':
   
 
 
     g = DiGraph.fromstdin()
+    #e = Edge((3,4))
   
+    #print(str(e))
+    #print (e)
     print(g)
