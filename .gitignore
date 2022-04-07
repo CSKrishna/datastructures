@@ -4,8 +4,6 @@ __pycache__/
 *.ipynb
 *.csv
 *.ckpt
-
-# seed project
 lightning_logs/
 checkpoints/
 *.yaml

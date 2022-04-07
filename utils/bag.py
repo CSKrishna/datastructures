@@ -1,4 +1,6 @@
-from linkedlist import Node, LinkIterator
+import sys, os
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+from utils.linkedlist import Node, LinkIterator
 
 class Bag:
 
