@@ -3,7 +3,6 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from utils.linkedlist import Node, LinkIterator
 
 class Bag:
-
     def __init__(self):
         self.first = None
         self.n = 0
